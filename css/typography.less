@@ -1,0 +1,150 @@
+/*------------------------------------------------------------------
+[Typography Stylesheet]
+Project:    Kevin Montgomery HTML
+Version:    3
+-------------------------------------------------------------------*/
+
+.container { 
+	
+	font-family: GudeaRegular, Arial, Helvetica, sans-serif; 
+	
+	em { font-family: GudeaItalic, Arial, Helvetica, sans-serif; }
+	strong { 
+		font-family: GudeaBold, "Arial Black", Helvetica, sans-serif;
+		font-weight: normal;
+	}
+	
+	.glyph { font-family: ModernPictogramsNormal; }
+	
+	/* BUTTONS */
+	.button, .nav-bar li {
+		font-family: GudeaBold, "Arial Black", Helvetica, sans-serif;
+		font-weight: normal;
+	}
+	
+	input[type="search"] {
+		font-family: GudeaRegular, Arial, Helvetica, sans-serif;
+	}
+	
+	/* HEADER GROUPS */
+	h1 { font-size: 1.5em; font-family: dosissemibold, "Arial Black", Arial, Helvetica, sans-serif; font-weight: normal; }
+	h2 { font-size: 1.375em; font-family: dosissemibold, "Arial Black", Arial, Helvetica, sans-serif; font-weight: normal; }
+	h3 { font-size: 1.25em; font-family: GudeaRegular, Arial, Helvetica, sans-serif; }
+	h4 { font-size: .875em; font-family: dosissemibold, "Arial Black", Arial, Helvetica, sans-serif; font-weight: normal; }
+	h5 { font-size: .75em; font-family: dosissemibold, "Arial Black", Arial, Helvetica, sans-serif; font-weight: normal; }
+	h6 { font-size: .5em; font-family: dosissemibold, "Arial Black", Arial, Helvetica, sans-serif; font-weight: normal; }
+	
+	h2 {
+		line-height: 1.5em;
+		font-size: 1.25em;
+		text-transform: uppercase;
+	}
+	
+	th { white-space:nowrap; }
+	
+	.profile.box {
+		.count {
+			color: @blue;
+			strong { font-size: 1.75em; }
+		}
+	}
+	
+	.align-right { 
+		text-align: right;
+	}
+	
+	.right.column, .right.columns {
+		p.profile-text {
+			font-size: .875em !important;
+			.title { color: @red; }
+		}
+		p.totals {
+			font-size: 2.5em !important;
+			font-family: GudeaBold, "Arial Black", Helvetica, sans-serif;
+			font-weight: normal;
+			margin: .25em 0 !important;
+		}
+	}
+	
+	footer { 
+		p { font-size: .875em !important; }
+	}
+	
+	/** DEFAULT LINK FORMATTING **/
+
+	a, a:link, a:visited {
+		text-decoration: none !important;
+		// border-bottom: 1px solid inherit;
+	}
+	
+	/* external links */
+	/*
+	a[href^="http://"]:after {
+			content: "\o";
+			font: ModernPictogramsNormal;
+			background:#ff9;
+			outline: 1px solid @black;
+			color: @black;
+			padding:1px;
+			margin:0 5px 0 0;
+	}
+	*/
+	
+	/* emails */
+	a[href^="mailto:"]:after {
+		font-family: ModernPictogramsNormal;
+		content: "m";
+		margin-left: .25em;
+		color: darken(@blue, 40%);
+	}
+	
+	/* pdfs */
+	a[href$=".pdf"]:after {
+		font-family: ModernPictogramsNormal;
+		content: "K";
+		margin-left: .25em;
+		color: darken(@blue, 40%);
+	}
+	
+	/* highlight links that open in a new window */
+	a[target="_blank"]:after,
+	a[target="new"]:after {
+		font-family: ModernPictogramsNormal;
+		content: "W";
+		margin-left: .25em;
+		color: darken(@blue, 40%);
+	}
+	
+	/* A neat way of styling your blockquotes to add a bit more punch to them. */
+	
+	blockquote {
+			 background:#f9f9f9;
+			 border-left:10px solid #ccc;
+			 margin:1.5em 10px;
+			 padding:.5em 10px;
+			 quotes:"\201C""\201D""\2018""\2019";
+	}
+	blockquote:before {
+			 color:#ccc;
+			 content:open-quote;
+			 font-size:4em;
+			 line-height:.1em;
+			 margin-right:.25em;
+			 vertical-align:-.4em;
+	}
+	blockquote p {
+			 display:inline;
+	}
+	
+	.title.bar {
+		& > h2 {
+			line-height: 1.5em;
+			font-size: 1.25em;
+		}
+	}
+	
+	nav {
+		li { list-style: none; }
+	}
+	
+}

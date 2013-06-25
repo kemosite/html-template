@@ -1,0 +1,284 @@
+/*------------------------------------------------------------------
+[Color Stylesheet]
+Project:    Kevin Montgomery HTML
+Version:    3
+-------------------------------------------------------------------*/
+
+/* Useful Mixins */
+.logo-bg-gradient(@logo-colour-start, @logo-colour-end) {
+	background: @logo-colour-start url(/img/header-titlebar-back.jpg) repeat-x; /* Old browsers */
+	background: -moz-linear-gradient(top,  @logo-colour-start 0%, @logo-colour-end 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@logo-colour-start), color-stop(100%,@logo-colour-end)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @logo-colour-start 0%,@logo-colour-end 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @logo-colour-start 0%,@logo-colour-end 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @logo-colour-start 0%,@logo-colour-end 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  @logo-colour-start 0%,@logo-colour-end 100%); /* W3C */
+	ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr=@logo-colour-start, endColorstr=@logo-colour-end,GradientType=0 )"; /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@logo-colour-start, endColorstr=@logo-colour-end,GradientType=0 ); /* IE6-8 */
+}
+
+.menu-bg-gradient(@menu-colour-start, @menu-colour-end) {
+	background: @menu-colour-start url(/img/header-menu-back.jpg) repeat-x; /* Old browsers */
+	background: -moz-linear-gradient(top,  @menu-colour-start 0%, @menu-colour-end 33%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@menu-colour-start), color-stop(33%,@menu-colour-end)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @menu-colour-start 0%,@menu-colour-end 33%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @menu-colour-start 0%,@menu-colour-end 33%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @menu-colour-start 0%,@menu-colour-end 33%); /* IE10+ */
+	background: linear-gradient(to bottom,  @menu-colour-start 0%,@menu-colour-end 33%); /* W3C */
+	ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr=@menu-colour-start, endColorstr=@menu-colour-end,GradientType=0 )"; /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@menu-colour-start, endColorstr=@menu-colour-end,GradientType=0 ); /* IE6-8 */
+}
+
+.profile-bg-gradient(@profile-colour-start, @profile-colour-end) {
+	background: @profile-colour-start url(/img/profile-gradient.jpg) repeat-x; /* Old browsers */
+	background: -moz-linear-gradient(top,  @profile-colour-start 0%, @profile-colour-end 33%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@profile-colour-start), color-stop(33%,@profile-colour-end)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @profile-colour-start 0%,@profile-colour-end 33%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @profile-colour-start 0%,@profile-colour-end 33%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @profile-colour-start 0%,@profile-colour-end 33%); /* IE10+ */
+	background: linear-gradient(to bottom,  @profile-colour-start 0%,@profile-colour-end 33%); /* W3C */
+	ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr=@profile-colour-start, endColorstr=@profile-colour-end,GradientType=0 )"; /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@profile-colour-start, endColorstr=@profile-colour-end,GradientType=0 ); /* IE6-8 */
+}
+
+.button-bg-gradient(@button-colour-start, @button-colour-end) {
+	background: @button-colour-start url(/img/header-titlebar-back.jpg) repeat-x; /* Old browsers */
+	background: -moz-linear-gradient(top,  @button-colour-start 0%, @button-colour-end 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@button-colour-start), color-stop(100%,@button-colour-end)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  @button-colour-start 0%,@button-colour-end 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  @button-colour-start 0%,@button-colour-end 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  @button-colour-start 0%,@button-colour-end 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  @button-colour-start 0%,@button-colour-end 100%); /* W3C */
+	ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr=@button-colour-start, endColorstr=@button-colour-end,GradientType=0 )"; /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@button-colour-start, endColorstr=@button-colour-end,GradientType=0 ); /* IE6-8 */
+}
+
+.bg-gradient(@colour) {
+	background: @colour; /* Old browsers */
+	background: -moz-linear-gradient(top,  lighten(@colour, 20%) 0%, @colour 50%, darken(@colour, 20%) 51%, @colour 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@colour, 20%)), color-stop(50%,@colour), color-stop(51%,darken(@colour, 20%)), color-stop(100%,@colour)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  lighten(@colour, 20%) 0%,@colour 50%,darken(@colour, 20%) 51%,@colour 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  lighten(@colour, 20%) 0%,@colour 50%,darken(@colour, 20%) 51%,@colour 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  lighten(@colour, 20%) 0%,@colour 50%,darken(@colour, 20%) 51%,@colour 100%); /* IE10+ */
+	background: linear-gradient(to bottom, lighten(@colour, 20%) 0%,@colour 50%,darken(@colour, 20%) 51%,@colour 100%); /* W3C */
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@colour, 20%))', endColorstr='@colour',GradientType=0 ); /* IE6-8 */
+}
+
+.transition-duration(@duration: .25s) {
+	transition-duration: @duration;
+	-moz-transition-duration: @duration; /* Firefox 4 */
+	-webkit-transition-duration: @duration; /* Safari and Chrome */
+	-o-transition-duration: @duration; /* Opera */
+}
+
+.border-transparency(@width, @style, @color) {
+	
+	border: @width @style @color;
+	
+	-moz-background-clip: border;     /* Firefox 3.6 */
+	-webkit-background-clip: border;  /* Safari 4? Chrome 6? */
+	background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+				
+	-moz-background-clip: padding;     /* Firefox 3.6 */
+	-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+	background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+				
+	-moz-background-clip: content;     /* Firefox 3.6 */
+	-webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+	background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+/* Shades of black */
+@black-70: #4d4d4d;
+@black-80: #333333;
+@black-90: #1a1a1a;
+@black-100: #000000;
+
+@black: @black-70;
+
+/* Skilled Workers Colors */
+@gray: #3f3f3f;
+@red: #ac1a2f;
+@blue: #4bb9f0;
+@green: #32ac1a;
+
+.container {
+	
+	header {
+		.row.logo {
+			background-color: #3c3c3c;
+			.logo-bg-gradient(#3c3c3c, #000000);
+			color: white;
+			.button {
+		
+				.menu-bg-gradient(#3c3c3c, #000000);
+				border-color: darken(@gray, 20%);
+				.transition-duration();
+				color: @blue;
+				
+				&:hover {
+					.menu-bg-gradient(#000000, #3c3c3c);
+				}
+			}
+		}
+	}
+	
+	.row.main-nav {
+		background-color: #535353;
+		.menu-bg-gradient(#535353, #000000);
+		
+		.button {
+		
+			.menu-bg-gradient(#3c3c3c, #000000);
+			border-color: darken(@gray, 20%);
+			.transition-duration();
+			color: @blue;
+			
+			&:hover {
+				.menu-bg-gradient(#000000, #3c3c3c);
+			}
+		}
+		
+	}
+	
+	.nav-bar.vertical {}
+	.nav-bar.horizontal, .menu.radius.button-group {
+		
+		.menu-bg-gradient(#535353, #000000);
+		
+		& > li {
+		
+			.menu-bg-gradient(#535353, #000000);
+			border-color: darken(@gray, 20%);
+			border-bottom-color: @gray;
+			.transition-duration();
+			
+			&:hover {
+				background: white;
+				border-color: @gray;
+			}
+			
+			a { color: @blue; }
+			
+			&.has-flyout {
+				
+				.flyout {
+					
+					background: white;
+					.border-transparency(5px, solid, rgba(128, 128, 128, 0.5));
+					border-width: 0 5px 5px 5px;
+					
+					li {
+						background: white;
+						border-color: darken(@gray, 20%);
+						border-bottom-color: @gray;
+						border: 0;
+						.transition-duration();
+						
+						&:hover {
+							background: @blue;
+						}
+						
+						a { 
+							color: @blue;
+							background: none;
+							border: 0;
+							
+							&:hover { color: white; }
+							
+						}
+						
+					}
+				}
+			}
+		}
+	}
+	
+	.side-nav {
+		& > li {
+			& > a {
+				&:hover {
+					color: @red;
+				}
+			}
+		}
+	}
+	
+	.button {
+		
+		.menu-bg-gradient(#3687ca, #1d6aa9);
+		.transition-duration();
+				
+		&:hover {
+			.menu-bg-gradient(darken(#3687ca, 20%), darken(#1d6aa9, 20%));
+		}
+	}
+	
+	section {
+		.row, .column, .columns {
+			background-color: white;
+		}
+		.row.no-bg {
+			background: none !important;
+		}
+		.right.column, .right.columns {
+			background: none !important;
+			.inset {
+				background-color: white;
+			}
+			p.totals {
+				color: @blue;
+			}
+		}
+		
+		.sub-nav { background-color: white; }
+		
+	}
+	
+	h2 {color: @red;}
+	
+	.profile.box {
+		.profile-bg-gradient(#fefefe, #d0d0d0);
+		.row, .column, .columns {
+			background: none;
+		}
+	}
+	
+	form, fieldset {
+		background-color: white;
+	}
+	
+	.secondary.button, .alert.button {		
+		.bg-gradient(@red);
+		border-color: darken(@red, 20%);
+		.transition-duration();
+		color: white;
+	}
+	.secondary.button:hover, .alert.button:hover {
+		// background: darken(@red, 10%);
+		.bg-gradient(darken(@red, 20%));
+	}
+	
+	.success.button {		
+		.bg-gradient(@green);
+		border-color: darken(@green, 20%);
+		.transition-duration();
+		color: white;
+	}
+	.success.button:hover {
+		// background: darken(@green, 10%);
+		.bg-gradient(darken(@green, 20%));
+	}
+	
+	.gray {	color: darken(@gray, 20%); }
+	.blue {	color: @blue; }
+	
+	.title {
+		color: @red;
+	}
+	
+	footer {
+		background-color: fade(@gray, 25%);
+	}
+
+}
