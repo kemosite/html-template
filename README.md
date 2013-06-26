@@ -14,6 +14,7 @@ Built on these frameworks
 - Jquery 1.9.1 http://jquery.com/
 - ScrollTo 1.4.3.1 https://github.com/flesler/jquery.scrollTo
 - FitText 1.0 https://github.com/davatron5000/FitText.js
+- PrettyPhoto 3.1.5 http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 - TypeSet 3.0 https://github.com/kemosite/typeset
 - MaxMind GeoIP http://www.maxmind.com/en/javascript
 - Google Analytics http://www.google.ca/analytics/

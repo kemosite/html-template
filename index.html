@@ -16,6 +16,7 @@ Author: Kevin Montgomery
 - Jquery 1.9.1 http://jquery.com/
 - ScrollTo 1.4.3.1 https://github.com/flesler/jquery.scrollTo
 - FitText 1.0 https://github.com/davatron5000/FitText.js
+- PrettyPhoto 3.1.5 http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 - TypeSet 3.0 https://github.com/kemosite/typeset
 - MaxMind GeoIP http://www.maxmind.com/en/javascript
 - Google Analytics http://www.google.ca/analytics/
@@ -59,6 +60,14 @@ Author: Kevin Montgomery
 
 <meta name="robots" content="index,follow" />
 
+<style>
+/** 
+  * [ Turn off the container until the page has loaded]
+  * (Is activated via JavaScript)
+  */
+.container { display: none; }
+</style>
+
 <!-- [Load Fonts] -->
 
 <!-- Glyphs: Modern Pictograms -->
@@ -76,13 +85,8 @@ Includes:
 -->
 <link rel="stylesheet/less" href="css/master.less?ver=1.3.0" type="text/css" media="all">
 
-<style>
-/** 
-  * [ Turn off the container until the page has loaded]
-  * (Is activated via JavaScript)
-  */
-.container { display: none; }
-</style>
+<!-- [PrettyPhoto 3.1.4] -->
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 
 <!-- [IE Fix for HTML5 Tags] -->
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -92,6 +96,13 @@ Includes:
 
 <!-- [Modernizr 2.6.2] -->
 <script src="js/vendor/modernizr-2.6.2.min.js?ver=2.6.2"></script>
+
+<!-- [Initialize JQuery] -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js?ver=1.9.1"><\/script>')</script>
+
+<!-- [PrettyPhoto 3.1.4] -->
+<script src="js/vendor/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 
 <link rel="canonical" href="http://site.local/" />
 
@@ -128,17 +139,25 @@ Includes:
 <li>Jquery 1.9.1 <a  href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
 <li>ScrollTo 1.4.3.1 <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">https://github.com/flesler/jquery.scrollTo</a></li>
 <li>FitText 1.0 <a href="https://github.com/davatron5000/FitText.js" target="_blank">https://github.com/davatron5000/FitText.js</a></li>
+<li>PrettyPhoto 3.1.5 <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></li>
 <li>TypeSet 3.0 <a href="https://github.com/kemosite/typeset" target="_blank">https://github.com/kemosite/typeset</a></li>
 <li>MaxMind GeoIP <a href="http://www.maxmind.com/en/javascript" target="_blank">http://www.maxmind.com/en/javascript</a></li>
 <li>Google Analytics <a href="http://www.google.ca/analytics/" target="_blank">http://www.google.ca/analytics/</a></li>
 </ul>
 
+<h3>Sample Gallery</h3>
+
+<ul class="gallery clearfix">
+<li><a href="images/fullscreen/1.JPG?lol=lol" rel="prettyPhoto[gallery1]" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures."><img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="Red round shape" /></a></li>
+<li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
+<li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="Fire!" /></a></li>
+<li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="Rock climbing" /></a></li>
+<li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="Fly kite, fly!" /></a></li>
+<li><a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
+</ul>
+
 </div>
 <!-- [End Container] -->
-
-<!-- [Initialize JQuery] -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js?ver=1.9.1"><\/script>')</script>
 
 <!-- [Initialize LESS CSS] -->
 <script>var less = { env: "development" }; // Comment out if used in production</script>

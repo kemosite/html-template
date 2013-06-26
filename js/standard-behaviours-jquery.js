@@ -29,23 +29,31 @@ if (retina) {
 */
 
 /* [Default Link Behaviour] */
-$("a").click(function(event) {
+
+$(document).ready(function(){
 	
-	// Override default behaviour
-  event.preventDefault();
-	var url = $(this).attr("href");
-	if (url) {
+	$("a[rel^='prettyPhoto']").prettyPhoto();
+	
+	$("a").click(function(event) {
 		
-		// If link is local, smooth-scroll to it
-		if (url.substr(0,1) == "#") {
-			$.scrollTo($(url), 1000);
+		// Override default behaviour
+		event.preventDefault();
+		var url = $(this).attr("href");
+		var rel = $(this).attr("rel");
 		
-		// Otherwise, fade the page out, then go to the link
-		} else {
-			$(".container").fadeOut("fast").css("display: none");
-			document.location.href=url;
-		}
-	} 
+		if (url && !rel) {
+			
+			// If link is local, smooth-scroll to it
+			if (url.substr(0,1) == "#") {
+				$.scrollTo($(url), 1000);
+			
+			// Otherwise, fade the page out, then go to the link
+			} else {
+				$(".container").fadeOut("fast").css("display: none");
+				document.location.href=url;
+			}
+		} 
+	});
 });
 
 /* [Fade The Page In] */
