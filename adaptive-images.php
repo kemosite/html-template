@@ -12,6 +12,13 @@
 
 /* CONFIG ----------------------------------------------------------------------------------------------------------- */
 
+/**
+  * Turn on error reporting.
+  */
+ini_set         ('display_errors', 1);
+error_reporting (E_ALL | E_STRICT);
+ini_set					('error_reporting', E_ALL);
+
 $resolutions   = array(1680, 1600, 1440, 1366, 1360, 1280, 1152, 1024, 800, 640); // the resolution break-points to use (screen widths, in pixels)
 $cache_path    = "ai-cache"; // where to store the generated re-sized images. Specify from your document root!
 $jpg_quality   = 60; // the quality of any generated JPGs on a scale of 0 to 100
@@ -24,12 +31,18 @@ $browser_cache = 60*60*24*7; // How long the BROWSER cache should last (seconds,
 --------------------------------------------------------------------------------------------------------------------- */
 
 /* get all of the required data from the HTTP request */
-$document_root  = $_SERVER['DOCUMENT_ROOT'];
-$requested_uri  = parse_url(urldecode($_SERVER['REQUEST_URI']), PHP_URL_PATH);
+$script_location = $_SERVER['PHP_SELF'];
+$script_directory = dirname($script_location) . "/";
+$requested_uri  = explode($script_directory, parse_url(urldecode($_SERVER['REQUEST_URI']), PHP_URL_PATH));
+$requested_uri = $requested_uri[1];
 $requested_file = basename($requested_uri);
 $source_file    = $requested_uri;
-echo $source_file;
 $resolution     = FALSE;
+
+/*
+ - Identidy the directories leading up to adaptive-images.php.
+ - Remove them from the directory structure in the image request.
+ */
 
 /* Mobile detection 
    NOTE: only used in the event a cookie isn't available. */
@@ -46,9 +59,9 @@ if(!is_mobile()){
 }
 
 // does the $cache_path directory exist already?
-if (!is_dir("$document_root/$cache_path")) { // no
-  if (!mkdir("$document_root/$cache_path", 0755, true)) { // so make it
-    if (!is_dir("$document_root/$cache_path")) { // check again to protect against race conditions
+if (!is_dir($cache_path)) { // no
+  if (!mkdir($cache_path, 0755, true)) { // so make it
+    if (!is_dir($cache_path)) { // check again to protect against race conditions
       // uh-oh, failed to make that directory
       sendErrorImage("Failed to create cache directory at: $document_root/$cache_path");
     }
@@ -76,7 +89,7 @@ function sendErrorImage($message) {
   $document_root  = $_SERVER['DOCUMENT_ROOT'];
   $requested_uri  = parse_url(urldecode($_SERVER['REQUEST_URI']), PHP_URL_PATH);
   $requested_file = basename($requested_uri);
-  $source_file    = $document_root.$requested_uri;
+  $source_file    = $requested_uri;
 
   if(!is_mobile()){
     $is_mobile = "FALSE";
@@ -307,7 +320,7 @@ if(substr($requested_uri, 0,1) == "/") {
 }
 
 /* whew might the cache file be? */
-$cache_file = $document_root."/$cache_path/$resolution/".$requested_uri;
+$cache_file = $cache_path."/".$resolution."/".$requested_uri;
 
 /* Use the resolution value as a path variable and check to see if an image of the same name exists at that path */
 if (file_exists($cache_file)) { // it exists cached at that size
