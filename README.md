@@ -1,7 +1,7 @@
-HTML Template 3.0
+HTML Template 4.0
 =================
 
-This is a combination of files and frameworks I use for building websites.
+This is a combination of files and frameworks I use for building websites. Supports the most recent versions of Chrome, Firefox, and Internet Explorer versions 9+.
 
 Built on these frameworks
 ========================
