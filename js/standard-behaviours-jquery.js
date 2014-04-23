@@ -1,15 +1,12 @@
 /*=============================================
 [Standard JavaScript Behaviours, HTML Template]
-Version: 3.0
+Version: 4.0
 Author: Kevin Montgomery
 ==============================================*/
 /* [Debug Tool] */
 function debug_report(item) {
 	 if(this.console){ console.log(item); }
 }
-
-/* [TypeSet Body Copy] */
-$("body, p").typeset();
 
 /* [Switch SVG for PNG Image, If Not Supported] */
 if(!Modernizr.svg) {

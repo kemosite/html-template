@@ -7,20 +7,19 @@ Version: 4.0
 Author: Kevin Montgomery
 
 [Built on these files and frameworks]
-- Foundation 5.1.1 http://foundation.zurb.com/
+- Foundation 5.2.2 http://foundation.zurb.com/
 - Initializr-Verekia 4.0: http://www.initializr.com/
 - Jquery 1.10.1 http://jquery.com/
 - PrettyPhoto 3.1.5 http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 - Adaptive Images 1.5.2: https://github.com/MattWilcox/Adaptive-Images
-- Less CSS 1.3.0: http://lesscss.org/
-- ScrollTo 1.4.3.1 https://github.com/flesler/jquery.scrollTo
-- FitText 1.0 https://github.com/davatron5000/FitText.js
+- Less CSS 1.7.0: http://lesscss.org/
+- ScrollTo 1.4.11 https://github.com/flesler/jquery.scrollTo
 - TypeSet 3.0 https://github.com/kemosite/typeset
 -->
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 9]>	<html class="no-js lt-ie9 dir="ltr" lang="en-CA">	<![endif]-->
-<!--[if gt IE 8]>	<!--><html class="no-js" dir="ltr" lang="en-CA"> <!--<![endif]-->
+<!--[if lt IE 9]>	<html class="no-js lt-ie9 typography lines orphans quotes" dir="ltr" lang="en-CA">	<![endif]-->
+<!--[if gt IE 8]>	<!--><html class="no-js typography lines orphans quotes" dir="ltr" lang="en-CA"> <!--<![endif]-->
 
 <head>
 
@@ -79,10 +78,10 @@ Includes:
 - Foundation CSS (Compressed) 3.1.1
 - Styles: LESS CSS 1.3.0
 -->
-<link rel="stylesheet/less" href="css/master.less?ver=1.3.0" type="text/css" media="all">
+<link rel="stylesheet/less" href="css/master.less?ver=1.7.0" type="text/css" media="all">
 
-<!-- [Modernizr - Foundation 5.1.1] -->
-<script src="js/vendor/modernizr.js?ver=5.1.1"></script>
+<!-- [Modernizr - Foundation 5.2.2] -->
+<script src="js/vendor/modernizr.js?ver=5.2.2"></script>
 
 <!-- [Initialize JQuery] -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -91,6 +90,29 @@ Includes:
 <!-- [PrettyPhoto 3.1.5] -->
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 <script src="js/vendor/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- [PrettyPhoto 3.1.5 Styles] -->
+<style type="text/css" media="screen">
+
+  #main ul li { display: inline; }
+
+  .wide {
+    border-bottom: 1px #000 solid;
+    width: 4000px;
+  }
+
+  .fleft { float: left; margin: 0 20px 0 0; }
+
+  .cboth { clear: both; }
+
+  #main {
+    background: #fff;
+    margin: 0 auto;
+    padding: 30px;
+    width: 1000px;
+  }
+
+  </style>
 
 <link rel="canonical" href="http://site.local/" />
 
@@ -128,154 +150,155 @@ Includes:
 </ul>
 
 <div class="row">
+  <div class="large-12 columns">
+    <h1>Welcome to Foundation</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+      <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+      <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+      <p>Once you've exhausted the fun in this document, you should check out:</p>
+      <div class="row">
+        <div class="large-4 medium-4 columns">
+      <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+    </div>
+        <div class="large-4 medium-4 columns">
+          <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+        </div>
+        <div class="large-4 medium-4 columns">
+          <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-8 medium-8 columns">
+    <h5>Here&rsquo;s your basic grid:</h5>
+    <!-- Grid Example -->
+
+    <div class="row">
       <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
+        <div class="callout panel">
+          <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 medium-6 columns">
+        <div class="callout panel">
+          <p>Six columns</p>
+        </div>
+      </div>
+      <div class="large-6 medium-6 columns">
+        <div class="callout panel">
+          <p>Six columns</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 medium-4 small-4 columns">
+        <div class="callout panel">
+          <p>Four columns</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-4 columns">
+        <div class="callout panel">
+          <p>Four columns</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-4 columns">
+        <div class="callout panel">
+          <p>Four columns</p>
+        </div>
       </div>
     </div>
     
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+    <hr />
+            
+    <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+    <form>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-12.columns" />
         </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+      </div>
+      <div class="row">
+        <div class="large-4 medium-4 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-4.columns" />
+        </div>
+        <div class="large-4 medium-4 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-4.columns" />
+        </div>
+        <div class="large-4 medium-4 columns">
+          <div class="row collapse">
+            <label>Input Label</label>
+            <div class="small-9 columns">
+              <input type="text" placeholder="small-9.columns" />
             </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
+            <div class="small-3 columns">
+              <span class="postfix">.com</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
-
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Select Box</label>
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
         </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="large-6 medium-6 columns">
+          <label>Choose Your Favorite</label>
+          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+        </div>
+        <div class="large-6 medium-6 columns">
+          <label>Check these out</label>
+          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Textarea Label</label>
+          <textarea placeholder="small-12.columns"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>     
 
-<h1>prettyPhoto</h1>
+  <div class="large-4 medium-4 columns">
+    <h5>Try one of these buttons:</h5>
+    <p><a href="#" class="small button">Simple Button</a><br/>
+    <a href="#" class="small radius button">Radius Button</a><br/>
+    <a href="#" class="small round button">Round Button</a><br/>            
+    <a href="#" class="medium success button">Success Btn</a><br/>
+    <a href="#" class="medium alert button">Alert Btn</a><br/>
+    <a href="#" class="medium secondary button">Secondary Btn</a></p>           
+    <div class="panel">
+      <h5>So many components, girl!</h5>
+      <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
+      <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+    </div>
+  </div>
+</div>
+
+<div id="main">
+      <h1>prettyPhoto</h1>
       
       <p>This page has been made for testing purpose only. It covers all the basic things you can handle in prettyPhoto.</p>
   
@@ -425,30 +448,19 @@ Includes:
       });
       </script>
   
-      <!-- Google Maps Code -->
-      <script type="text/javascript"
-          src="http://maps.google.com/maps/api/js?sensor=true">
-      </script>
-      <script type="text/javascript">
-        function initialize() {
-          var latlng = new google.maps.LatLng(-34.397, 150.644);
-          var myOptions = {
-            zoom: 8,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          var map = new google.maps.Map(document.getElementById("map_canvas"),
-              myOptions);
-        }
-
-      </script>
-      <!-- END Google Maps Code -->
 </div>
 <!-- [End Container] -->
 
-<!-- [Initialize LESS CSS] -->
+<!-- [Typography 4.0] -->
+<script src="js/typography-4.0.min.js?ver=4.0"></script>
+<script>
+typography_obj.init();
+</script>
+
+<!-- [Initialize LESS CSS 1.7.0] -->
 <script>var less = { env: "development" }; // Comment out if used in production</script>
-<script type="text/javascript" src="js/vendor/less-1.3.3.min.js?ver=1.3.3"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+<script type="text/javascript" src="js/vendor/less-1.7.0.min.js?ver=1.7.0"></script>
 
 <!-- [Initialize Foundation 5.1.1] -->
 <script src="js/vendor/foundation.min.js"></script>
@@ -468,17 +480,11 @@ s.parentNode.insertBefore(g,s)}(document,'script'));
 <!-- [Scroll To 1.4.3.1] -->
 <script src="js/vendor/jquery.scrollTo-1.4.3.1-min.js?ver=1.4.3.1"></script>
 
-<!-- [FitText 1.0] -->
-<script src="js/vendor/jquery.fittext.js?ver=1.0"></script>
-
-<!-- [TypeSet 3.0] -->
-<script src="js/jquery.typeset-v3.js?ver=3"></script>
-
 <!-- [Custom JQuery] -->
-<script src="js/my-jquery.js?ver=1.9.1"></script>
+<script src="js/my-jquery.js?ver=1.10.1"></script>
 
 <!-- [JQuery: Standard Behaviours] -->
-<script src="js/standard-behaviours-jquery.js?ver=1.9.1"></script>
+<script src="js/standard-behaviours-jquery.js?ver=1.10.1"></script>
 
 <noscript>
 	<style>
