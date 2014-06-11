@@ -7,14 +7,14 @@ Version: 4.0
 Author: Kevin Montgomery
 
 [Built on these files and frameworks]
-- Foundation 5.2.2 http://foundation.zurb.com/
-- Initializr-Verekia 4.0: http://www.initializr.com/
-- Jquery 1.10.1 http://jquery.com/
-- PrettyPhoto 3.1.5 http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
-- Adaptive Images 1.5.2: https://github.com/MattWilcox/Adaptive-Images
-- Less CSS 1.7.0: http://lesscss.org/
-- ScrollTo 1.4.11 https://github.com/flesler/jquery.scrollTo
-- TypeSet 3.0 https://github.com/kemosite/typeset
+- Foundation Essentials 5.2.3 - http://foundation.zurb.com/
+- Initializr-Verekia 4.0 - http://www.initializr.com/
+- Jquery 1.11.1  - http://jquery.com/
+- PrettyPhoto 3.1.5  - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
+- Adaptive Images 1.5.2 - https://github.com/MattWilcox/Adaptive-Images
+- Less CSS 1.7.0 - http://lesscss.org/
+- ScrollTo 1.4.12 - https://github.com/flesler/jquery.scrollTo/releases
+- Typography 4.1 - https://github.com/kemosite/typographyhttps://github.com/kemosite/typography
 -->
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -63,10 +63,10 @@ Author: Kevin Montgomery
 .container { display: none; }
 </style>
 
-<!-- [Load Fonts] -->
-
 <!-- Glyphs: Modern Pictograms -->
 <link rel="stylesheet" href="fonts/modern-pictograms/stylesheet.css" type="text/css" media="all">
+
+<!-- [Load Fonts, Remove or comment out unused] -->
 
 <!-- Sans Serif: Source Sans -->
 <link rel="stylesheet" href="fonts/source-sans/stylesheet.css" type="text/css" media="all">
@@ -74,18 +74,18 @@ Author: Kevin Montgomery
 <!--
 [ Master Stylesheet]
 Includes:
-- Normalize CSS Reset 3.0.0
-- Foundation CSS (Compressed) 3.1.1
-- Styles: LESS CSS 1.3.0
+- Normalize CSS Reset per Initializr 4.0
+- Foundation Essentials CSS 5.2.3
+- Styles: LESS CSS 1.7.0
 -->
 <link rel="stylesheet/less" href="css/master.less?ver=1.7.0" type="text/css" media="all">
 
-<!-- [Modernizr - Foundation 5.2.2] -->
-<script src="js/vendor/modernizr.js?ver=5.2.2"></script>
+<!-- [Modernizr - Foundation 5.2.3] -->
+<script src="js/vendor/modernizr.js?ver=5.2.3"></script>
 
 <!-- [Initialize JQuery] -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
 <!-- [PrettyPhoto 3.1.5] -->
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
@@ -134,19 +134,16 @@ Includes:
 <h3>Built on these files and frameworks:</h3>
 
 <ul>
-<li>HTML5 Boilerplate 4.2.0: <a href="https://github.com/h5bp/html5-boilerplate" target="_blank">https://github.com/h5bp/html5-boilerplate</a></li>
-<li>Adaptive Images 1.5.2: <a href="https://github.com/MattWilcox/Adaptive-Images" target="_blank">https://github.com/MattWilcox/Adaptive-Images</a></li>
-<li>Modernizr 2.6.2: <a href="https://github.com/Modernizr/Modernizr/" target="_blank">https://github.com/Modernizr/Modernizr/</a></li>
-<li>Less CSS 1.3.0: <a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></li>
-<li>Normalize 2.0.1: <a href="http://necolas.github.io/normalize.css/" target="_blank">http://necolas.github.io/normalize.css/</a></li>
-<li>CSS PIE 1.0.0 <a href="http://css3pie.com/" target="_blank">http://css3pie.com/</a></li>
-<li>Jquery 1.9.1 <a  href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
-<li>ScrollTo 1.4.3.1 <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">https://github.com/flesler/jquery.scrollTo</a></li>
-<li>FitText 1.0 <a href="https://github.com/davatron5000/FitText.js" target="_blank">https://github.com/davatron5000/FitText.js</a></li>
+
+<li>Foundation Essentials 5.2.3 <a href="http://foundation.zurb.com/" target="_blank">http://foundation.zurb.com/</a></li>
+<li>Initializr-Verekia 4.0 <a href="http://www.initializr.com/" target="_blank">http://www.initializr.com/</a></li>
+<li>Jquery 1.11.1 <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
 <li>PrettyPhoto 3.1.5 <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></li>
-<li>TypeSet 3.0 <a href="https://github.com/kemosite/typeset" target="_blank">https://github.com/kemosite/typeset</a></li>
-<li>MaxMind GeoIP <a href="http://www.maxmind.com/en/javascript" target="_blank">http://www.maxmind.com/en/javascript</a></li>
-<li>Google Analytics <a href="http://www.google.ca/analytics/" target="_blank">http://www.google.ca/analytics/</a></li>
+<li>Adaptive Images 1.5.2 <a href="https://github.com/MattWilcox/Adaptive-Images" target="_blank">https://github.com/MattWilcox/Adaptive-Images</a></li>
+<li>Less CSS 1.7.0 <a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></li>
+<li>ScrollTo 1.4.12 <a href="https://github.com/flesler/jquery.scrollTo/releases" target="_blank">https://github.com/flesler/jquery.scrollTo/releases</a></li>
+<li>Typography 4.1 <a href="https://github.com/kemosite/typographyhttps://github.com/kemosite/typography" target="_blank">https://github.com/kemosite/typographyhttps://github.com/kemosite/typography</a></li>
+
 </ul>
 
 <div class="row">
@@ -451,18 +448,21 @@ Includes:
 </div>
 <!-- [End Container] -->
 
-<!-- [Typography 4.0] -->
-<script src="js/typography-4.0.min.js?ver=4.0"></script>
+<!-- [Initializr 4.0 Plugins] -->
+<script src="js/vendor/plugins.js"></script>
+
+<!-- [Typography 4.1] -->
+<script src="js/typography-4.1.min.js?ver=4.1"></script>
 <script>
-typography_obj.init();
+  typography_obj.init();
 </script>
 
 <!-- [Initialize LESS CSS 1.7.0] -->
 <script>var less = { env: "development" }; // Comment out if used in production</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
-<script type="text/javascript" src="js/vendor/less-1.7.0.min.js?ver=1.7.0"></script>
+<script>window.less || document.write('<script type="text/javascript" src="js/vendor/less-1.7.0.min.js?ver=1.7.0"><\/script>')</script>
 
-<!-- [Initialize Foundation 5.1.1] -->
+<!-- [Initialize Foundation Essentials 5.2.3] -->
 <script src="js/vendor/foundation.min.js"></script>
 <script>
   $(document).foundation();
@@ -477,14 +477,14 @@ s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 -->
 
-<!-- [Scroll To 1.4.3.1] -->
-<script src="js/vendor/jquery.scrollTo-1.4.3.1-min.js?ver=1.4.3.1"></script>
+<!-- [Scroll To 1.4.12] -->
+<script src="js/vendor/jquery.scrollTo-1.4.12.min.js?ver=1.4.12"></script>
 
-<!-- [Custom JQuery] -->
-<script src="js/my-jquery.js?ver=1.10.1"></script>
+<!-- [Custom JQuery 1.11.1] -->
+<script src="js/my-jquery.js?ver=1.11.1"></script>
 
-<!-- [JQuery: Standard Behaviours] -->
-<script src="js/standard-behaviours-jquery.js?ver=1.10.1"></script>
+<!-- [JQuery 1.11.1: Standard Behaviours] -->
+<script src="js/standard-behaviours-jquery.js?ver=1.11.1"></script>
 
 <noscript>
 	<style>
