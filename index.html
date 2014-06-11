@@ -1,35 +1,29 @@
-<!DOCTYPE HTML>
+<!doctype html>
 
 <!--
 [HTML Template]
 Description: This is a combination of files and frameworks I use for building websites.
-Version: 3.0
+Version: 4.0
 Author: Kevin Montgomery
 
 [Built on these files and frameworks]
-- HTML5 Boilerplate 4.2.0: https://github.com/h5bp/html5-boilerplate
-- Adaptive Images 1.5.2: https://github.com/MattWilcox/Adaptive-Images
-- Modernizr 2.6.2: https://github.com/Modernizr/Modernizr/
-- Less CSS 1.3.0: http://lesscss.org/
-- Normalize 2.0.1: http://necolas.github.io/normalize.css/
-- CSS PIE 1.0.0 http://css3pie.com/
-- Jquery 1.9.1 http://jquery.com/
-- ScrollTo 1.4.3.1 https://github.com/flesler/jquery.scrollTo
-- FitText 1.0 https://github.com/davatron5000/FitText.js
-- PrettyPhoto 3.1.5 http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
-- TypeSet 3.0 https://github.com/kemosite/typeset
-- MaxMind GeoIP http://www.maxmind.com/en/javascript
-- Google Analytics http://www.google.ca/analytics/
+- Foundation Essentials 5.2.3 - http://foundation.zurb.com/
+- Initializr-Verekia 4.0 - http://www.initializr.com/
+- Jquery 1.11.1  - http://jquery.com/
+- PrettyPhoto 3.1.5  - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
+- Adaptive Images 1.5.2 - https://github.com/MattWilcox/Adaptive-Images
+- Less CSS 1.7.0 - http://lesscss.org/
+- ScrollTo 1.4.12 - https://github.com/flesler/jquery.scrollTo/releases
+- Typography 4.1 - https://github.com/kemosite/typographyhttps://github.com/kemosite/typography
 -->
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]>	<html class="no-js lt-ie9 lt-ie8 lt-ie7" dir="ltr" lang="en-CA">	<![endif]-->
-<!--[if IE 7]>		<html class="no-js lt-ie9 lt-ie8" dir="ltr" lang="en-CA">					<![endif]-->
-<!--[if IE 8]>		<html class="no-js lt-ie9" dir="ltr" lang="en-CA">								<![endif]-->
-<!--[if gt IE 8]>	<!--><html class="no-js" dir="ltr" lang="en-CA">							<!--<![endif]-->
+<!--[if lt IE 9]>	<html class="no-js lt-ie9 typography lines orphans quotes" dir="ltr" lang="en-CA">	<![endif]-->
+<!--[if gt IE 8]>	<!--><html class="no-js typography lines orphans quotes" dir="ltr" lang="en-CA"> <!--<![endif]-->
 
 <head>
 
+<!-- Adaptive Images Cookie -->
 <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
 <meta charset="utf-8">
@@ -38,6 +32,7 @@ Author: Kevin Montgomery
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- [Stop Skype from highlighting numbers] -->
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
 
 <!-- [Keywords and descriptions] -->
@@ -46,13 +41,13 @@ Author: Kevin Montgomery
 
 <!-- [Open Graph] -->
 <meta property='og:locale' content='en_CA'/>
-<meta property='og:title' content='HTML Template: 3.0'/>
+<meta property='og:title' content='HTML Template: 4.0'/>
 <meta property='og:description' content='A combinations of frameworks I use for building websites.'/>
 <meta property='og:url' content=''/>
-<meta property='og:site_name' content='HTML Template: 3.0'/>
+<meta property='og:site_name' content='HTML Template: 4.0'/>
 <meta property='og:type' content='article'/>
 
-<title>HTML Template: 3.0</title>
+<title>HTML Template</title>
 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -68,122 +63,409 @@ Author: Kevin Montgomery
 .container { display: none; }
 </style>
 
-<!-- [Load Fonts] -->
-
 <!-- Glyphs: Modern Pictograms -->
-<link rel="stylesheet" href="fonts/modern-pictograms/stylesheet.css?ver=3.0" type="text/css" media="all">
+<link rel="stylesheet" href="fonts/modern-pictograms/stylesheet.css" type="text/css" media="all">
+
+<!-- [Load Fonts, Remove or comment out unused] -->
 
 <!-- Sans Serif: Source Sans -->
-<link rel="stylesheet" href="fonts/source-sans/stylesheet.css?ver=3.0" type="text/css" media="all">
+<link rel="stylesheet" href="fonts/source-sans/stylesheet.css" type="text/css" media="all">
 
 <!--
 [ Master Stylesheet]
 Includes:
-- Normalize CSS Reset 2.0.1
-- Foundation CSS (Compressed) 3.1.1
-- Styles: LESS CSS 1.3.0
+- Normalize CSS Reset per Initializr 4.0
+- Foundation Essentials CSS 5.2.3
+- Styles: LESS CSS 1.7.0
 -->
-<link rel="stylesheet/less" href="css/master.less?ver=1.3.0" type="text/css" media="all">
+<link rel="stylesheet/less" href="css/master.less?ver=1.7.0" type="text/css" media="all">
 
-<!-- [PrettyPhoto 3.1.4] -->
-<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-
-<!-- [IE Fix for HTML5 Tags] -->
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-<!-- [CSS PIE for IE < 10] -->
-<!--[if lt IE 10]><script type="text/javascript" src="js/vendor/PIE.js?ver=1.0.0"></script><![endif]-->
-
-<!-- [Modernizr 2.6.2] -->
-<script src="js/vendor/modernizr-2.6.2.min.js?ver=2.6.2"></script>
+<!-- [Modernizr - Foundation 5.2.3] -->
+<script src="js/vendor/modernizr.js?ver=5.2.3"></script>
 
 <!-- [Initialize JQuery] -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=1.9.1"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js?ver=1.9.1"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-<!-- [PrettyPhoto 3.1.4] -->
+<!-- [PrettyPhoto 3.1.5] -->
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 <script src="js/vendor/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- [PrettyPhoto 3.1.5 Styles] -->
+<style type="text/css" media="screen">
+
+  #main ul li { display: inline; }
+
+  .wide {
+    border-bottom: 1px #000 solid;
+    width: 4000px;
+  }
+
+  .fleft { float: left; margin: 0 20px 0 0; }
+
+  .cboth { clear: both; }
+
+  #main {
+    background: #fff;
+    margin: 0 auto;
+    padding: 30px;
+    width: 1000px;
+  }
+
+  </style>
 
 <link rel="canonical" href="http://site.local/" />
 
 </head>
 
 <body>
-<!-- 
-[Old IE warning]
-** Google has dropped Chrome Frame: Replace message with links to Firefox of Chrome. **
--->
 
-<!--[if lt IE 8]>
-<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<!--[if lt IE 9]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a></p>
 <![endif]-->
-
-<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
 <!-- [Container] -->
 <div class="container">
 
-<h1>HTML Template: 3.0</h1>
+<h1>HTML Template: 4.0</h1>
 
 <p>This is a combination of files and frameworks I use for building websites.</p>
 
 <h3>Built on these files and frameworks:</h3>
 
 <ul>
-<li>HTML5 Boilerplate 4.2.0: <a href="https://github.com/h5bp/html5-boilerplate" target="_blank">https://github.com/h5bp/html5-boilerplate</a></li>
-<li>Adaptive Images 1.5.2: <a href="https://github.com/MattWilcox/Adaptive-Images" target="_blank">https://github.com/MattWilcox/Adaptive-Images</a></li>
-<li>Modernizr 2.6.2: <a href="https://github.com/Modernizr/Modernizr/" target="_blank">https://github.com/Modernizr/Modernizr/</a></li>
-<li>Less CSS 1.3.0: <a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></li>
-<li>Normalize 2.0.1: <a href="http://necolas.github.io/normalize.css/" target="_blank">http://necolas.github.io/normalize.css/</a></li>
-<li>CSS PIE 1.0.0 <a href="http://css3pie.com/" target="_blank">http://css3pie.com/</a></li>
-<li>Jquery 1.9.1 <a  href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
-<li>ScrollTo 1.4.3.1 <a href="https://github.com/flesler/jquery.scrollTo" target="_blank">https://github.com/flesler/jquery.scrollTo</a></li>
-<li>FitText 1.0 <a href="https://github.com/davatron5000/FitText.js" target="_blank">https://github.com/davatron5000/FitText.js</a></li>
+
+<li>Foundation Essentials 5.2.3 <a href="http://foundation.zurb.com/" target="_blank">http://foundation.zurb.com/</a></li>
+<li>Initializr-Verekia 4.0 <a href="http://www.initializr.com/" target="_blank">http://www.initializr.com/</a></li>
+<li>Jquery 1.11.1 <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
 <li>PrettyPhoto 3.1.5 <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></li>
-<li>TypeSet 3.0 <a href="https://github.com/kemosite/typeset" target="_blank">https://github.com/kemosite/typeset</a></li>
-<li>MaxMind GeoIP <a href="http://www.maxmind.com/en/javascript" target="_blank">http://www.maxmind.com/en/javascript</a></li>
-<li>Google Analytics <a href="http://www.google.ca/analytics/" target="_blank">http://www.google.ca/analytics/</a></li>
+<li>Adaptive Images 1.5.2 <a href="https://github.com/MattWilcox/Adaptive-Images" target="_blank">https://github.com/MattWilcox/Adaptive-Images</a></li>
+<li>Less CSS 1.7.0 <a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></li>
+<li>ScrollTo 1.4.12 <a href="https://github.com/flesler/jquery.scrollTo/releases" target="_blank">https://github.com/flesler/jquery.scrollTo/releases</a></li>
+<li>Typography 4.1 <a href="https://github.com/kemosite/typographyhttps://github.com/kemosite/typography" target="_blank">https://github.com/kemosite/typographyhttps://github.com/kemosite/typography</a></li>
+
 </ul>
 
-<h3>Sample Gallery</h3>
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Welcome to Foundation</h1>
+  </div>
+</div>
 
-<ul class="gallery clearfix">
-<li><a href="images/fullscreen/1.JPG?lol=lol" rel="prettyPhoto[gallery1]" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures."><img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="Red round shape" /></a></li>
-<li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
-<li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="Fire!" /></a></li>
-<li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="Rock climbing" /></a></li>
-<li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="Fly kite, fly!" /></a></li>
-<li><a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
-</ul>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+      <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+      <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+      <p>Once you've exhausted the fun in this document, you should check out:</p>
+      <div class="row">
+        <div class="large-4 medium-4 columns">
+      <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+    </div>
+        <div class="large-4 medium-4 columns">
+          <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+        </div>
+        <div class="large-4 medium-4 columns">
+          <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="row">
+  <div class="large-8 medium-8 columns">
+    <h5>Here&rsquo;s your basic grid:</h5>
+    <!-- Grid Example -->
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="callout panel">
+          <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 medium-6 columns">
+        <div class="callout panel">
+          <p>Six columns</p>
+        </div>
+      </div>
+      <div class="large-6 medium-6 columns">
+        <div class="callout panel">
+          <p>Six columns</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 medium-4 small-4 columns">
+        <div class="callout panel">
+          <p>Four columns</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-4 columns">
+        <div class="callout panel">
+          <p>Four columns</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-4 columns">
+        <div class="callout panel">
+          <p>Four columns</p>
+        </div>
+      </div>
+    </div>
+    
+    <hr />
+            
+    <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+    <form>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-12.columns" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 medium-4 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-4.columns" />
+        </div>
+        <div class="large-4 medium-4 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-4.columns" />
+        </div>
+        <div class="large-4 medium-4 columns">
+          <div class="row collapse">
+            <label>Input Label</label>
+            <div class="small-9 columns">
+              <input type="text" placeholder="small-9.columns" />
+            </div>
+            <div class="small-3 columns">
+              <span class="postfix">.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Select Box</label>
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 medium-6 columns">
+          <label>Choose Your Favorite</label>
+          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+        </div>
+        <div class="large-6 medium-6 columns">
+          <label>Check these out</label>
+          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Textarea Label</label>
+          <textarea placeholder="small-12.columns"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>     
+
+  <div class="large-4 medium-4 columns">
+    <h5>Try one of these buttons:</h5>
+    <p><a href="#" class="small button">Simple Button</a><br/>
+    <a href="#" class="small radius button">Radius Button</a><br/>
+    <a href="#" class="small round button">Round Button</a><br/>            
+    <a href="#" class="medium success button">Success Btn</a><br/>
+    <a href="#" class="medium alert button">Alert Btn</a><br/>
+    <a href="#" class="medium secondary button">Secondary Btn</a></p>           
+    <div class="panel">
+      <h5>So many components, girl!</h5>
+      <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
+      <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
+    </div>
+  </div>
+</div>
+
+<div id="main">
+      <h1>prettyPhoto</h1>
+      
+      <p>This page has been made for testing purpose only. It covers all the basic things you can handle in prettyPhoto.</p>
+  
+      <p>For complete documentation, please refer to the official website: <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></p>
+  
+      <h2>Gallery</h2>
+      <ul class="gallery clearfix">
+        <li><a href="images/fullscreen/1.JPG?lol=lol" rel="prettyPhoto[gallery1]" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures."><img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="Red round shape" /></a></li>
+        <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
+        <li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="Fire!" /></a></li>
+        <li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="Rock climbing" /></a></li>
+        <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="Fly kite, fly!" /></a></li>
+        <li><a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
+      </ul>
+
+      <h2>Gallery 2</h2>
+      <ul class="gallery clearfix">
+        <li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery2]" title="How is the description on that one? How is the description on that one? How is the description on that one? "><img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="This is a pretty long title" /></a></li>
+        <li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery2]" title="Description on a single line."><img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="" /></a></li>
+        <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="" /></a></li>
+        <li><a href="images/fullscreen/1.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="" /></a></li>
+        <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="" /></a></li>
+      </ul>
+
+      <h2>API Call</h2>
+      <script type="text/javascript" charset="utf-8">
+        api_gallery=['images/fullscreen/1.JPG','images/fullscreen/2.jpg','images/fullscreen/3.JPG'];
+        api_titles=['API Call Image 1','API Call Image 2','API Call Image 3'];
+        api_descriptions=['Description 1','Description 2','Description 3'];
+      </script>
+      <p><a href="#" onclick="$.prettyPhoto.open(api_gallery,api_titles,api_descriptions); return false">API call</a></p>
+
+      <h2>Picture alone</h2>
+      <ul class="gallery clearfix">
+        <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto" title="&lt;a href=&#x27;http://www.google.ca&#x27; target=&#x27;_blank&#x27; &gt;This will open Google.com in a new window&lt;/a&gt;"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Picture alone 1" /></a></li>
+      </ul>
+      <div class="fleft">
+        <h2>Flash</h2>
+        <ul class="gallery clearfix">
+          <li><a href="http://www.adobe.com/products/flashplayer/include/marquee/design.swf?width=792&amp;height=294" rel="prettyPhoto[flash]" title="Flash 10 demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="Flash 10 demo" /></a></li>
+        </ul>
+      </div>
+      <div class="fleft">
+        <h2>YouTube</h2>
+        <ul class="gallery clearfix">
+          <li><a href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="" /></a></li>
+          <li><a href="http://youtu.be/kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="" /></a></li>
+        </ul>
+      </div>
+      <div class="fleft">
+        <h2>Vimeo</h2>
+        <ul class="gallery clearfix">
+          <li><a href="http://vimeo.com/7874398&width=700" rel="prettyPhoto" title="Vimeo video"><img src="images/thumbnails/flash-logo.png" width="60" alt="VIMEO!" /></a></li>
+        </ul>
+      </div>
+      
+      <br class="cboth" />
+  
+      <h2>Movies (.mov)</h2>
+      <ul class="gallery clearfix">
+        <li><a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]" title="Tron!"><img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" /></a></li>
+        <li><a href="http://trailers.apple.com/movies/sony_pictures/karatekid/karatekid-tlr3_r640s.mov?width=640&height=304" rel="prettyPhoto[movies]" title="The Karate Kid"><img src="images/thumbnails/quicktime-logo.gif" alt="The Karate Kid" width="60" /></a></li>
+        <li><a href="http://trailers.apple.com/movies/paramount/shutterisland/shutterisland-tvspot1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]" title="Shutter Island"><img src="images/thumbnails/quicktime-logo.gif" alt="Shutter Island" width="60" /></a></li>
+      </ul>
+  
+      <h2>Movies (.mov) alone</h2>
+      <ul class="gallery clearfix">
+        <li><a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto" title="Tron!"><img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" /></a></li>
+      </ul>
+  
+      <h2>Unusual sizes</h2>
+      <ul class="gallery clearfix">
+        <li><a href="images/fullscreen/wide.gif" rel="prettyPhoto[unusual]">Wide image (3000 x 1500)</a></li>
+        <li><a href="images/fullscreen/high.gif" rel="prettyPhoto[unusual]">High image (1500 x 3000)</a></li>
+        <li><a href="images/fullscreen/huge.gif" rel="prettyPhoto[unusual]">Huge image (3000 x 3000)</a></li>
+      </ul>
+  
+      <h2>Iframe</h2>
+      <ul class="gallery clearfix">
+        <li><a href="http://www.google.com/search?ie=UTF-8&amp;oe=UTF-8&amp;q=prettyphoto&amp;iframe=true&amp;width=100%&amp;height=100%" rel="prettyPhoto[iframe]">Google.ca</a></li>
+        <li><a href="http://www.facebook.com?iframe=true&amp;width=600&amp;height=300" rel="prettyPhoto[iframe]">Facebook</a></li>
+        <li><a href="http://nmfe.co?iframe=true&amp;width=300&amp;height=200" rel="prettyPhoto[iframe]">My site</a></li>
+      </ul>
+  
+      <h2>AJAX</h2>
+      <ul class="gallery clearfix">
+        <li><a href="xhr_response.html?ajax=true&amp;width=400&amp;height=160" rel="prettyPhoto[ajax]">Sample AJAX</a></li>
+      </ul>
+  
+      <h2>Mixed gallery</h2>
+      <ul class="gallery clearfix">
+        <li><a href="http://www.google.ca?iframe=true&amp;width=1000&amp;height=500" rel="prettyPhoto[mixed]">Google.ca</a></li>
+        <li><a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[mixed]" title="Tron!"><img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" /></a></li>
+        <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[mixed]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="" /></a></li>
+        <li><a href="http://www.adobe.com/products/flashplayer/include/marquee/design.swf?width=792&amp;height=294" rel="prettyPhoto[mixed]" title="Flash 10 demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="Flash 10 demo" /></a></li>
+      </ul>
+  
+      <h2>Inline content</h2>
+      <ul class="gallery clearfix">
+        <li><a href="#inline_demo" rel="prettyPhoto[inline]">Inline content 1</a></li>
+        <li><a href="#inline_demo2" rel="prettyPhoto[inline]">Inline content 2</a></li>
+        <li><a href="#inline_demo3" rel="prettyPhoto[inline]">Inline content 3</a></li>
+      </ul>
+      <div id="inline_demo" style="display:none;">
+        <p><a href="http://www.google.ca?iframe=true&amp;width=1000&amp;height=500">Google.ca</a></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="inline_demo2" style="display:none;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="inline_demo3" style="display:none;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p><img src="images/fullscreen/2.jpg" /></p>
+      </div>
+  
+      <h2>Custom content</h2>
+      <ul id="custom_content" class="gallery clearfix">
+        <li><a href="#?custom=true&width=260&height=270" rel="prettyPhoto">Google Maps</a></li>
+        <li><a href="#?custom=true&width=260&height=400" rel="prettyPhoto">Ads</a></li>
+      </ul>
+      
+      <br /><br />
+      
+      <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/_HOMoTqEASY&hl=en&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param><embed src="http://www.youtube.com/v/_HOMoTqEASY&hl=en&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344" wmode="opaque"></embed></object>
+      <iframe title="YouTube video player" width="425" height="344" src="http://www.youtube.com/embed/_HOMoTqEASY" frameborder="0" allowfullscreen></iframe>
+  
+      <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        $("area[rel^='prettyPhoto']").prettyPhoto();
+        
+        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+    
+        $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+          custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+          changepicturecallback: function(){ initialize(); }
+        });
+
+        $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+          custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+          changepicturecallback: function(){ _bsap.exec(); }
+        });
+      });
+      </script>
+  
 </div>
 <!-- [End Container] -->
 
-<!-- [Initialize LESS CSS] -->
+<!-- [Initializr 4.0 Plugins] -->
+<script src="js/vendor/plugins.js"></script>
+
+<!-- [Typography 4.1] -->
+<script src="js/typography-4.1.min.js?ver=4.1"></script>
+<script>
+  typography_obj.init();
+</script>
+
+<!-- [Initialize LESS CSS 1.7.0] -->
 <script>var less = { env: "development" }; // Comment out if used in production</script>
-<script type="text/javascript" src="js/vendor/less-1.3.3.min.js?ver=1.3.3"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+<script>window.less || document.write('<script type="text/javascript" src="js/vendor/less-1.7.0.min.js?ver=1.7.0"><\/script>')</script>
 
-<!-- [Initialize Foundation JS] -->
+<!-- [Initialize Foundation Essentials 5.2.3] -->
+<script src="js/vendor/foundation.min.js"></script>
 <script>
-document.write('<script src=' +
-('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-'.js><\/script>')
-</script>
-<script src="js/vendor/foundation.min.js?ver=4.0.9"></script>
-<script src="js/vendor/app.js?ver=3.1.1"></script>
-<script>
-$(document).foundation();
-</script>
-
-<!-- [Initialize CSS PIE] -->
-<script type="text/javascript">
-$(function() {
-    if (window.PIE) {
-        $('.rounded').each(function() {
-            PIE.attach(this);
-        });
-    }
-});
+  $(document).foundation();
 </script>
 
 <!-- [Initialize Google Analytics]
@@ -195,37 +477,14 @@ s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
 -->
 
-<!-- [Scroll To 1.4.3.1] -->
-<script src="js/vendor/jquery.scrollTo-1.4.3.1-min.js?ver=1.4.3.1"></script>
+<!-- [Scroll To 1.4.12] -->
+<script src="js/vendor/jquery.scrollTo-1.4.12.min.js?ver=1.4.12"></script>
 
-<!-- [FitText 1.0] -->
-<script src="js/vendor/jquery.fittext.js?ver=1.0"></script>
+<!-- [Custom JQuery 1.11.1] -->
+<script src="js/my-jquery.js?ver=1.11.1"></script>
 
-<!-- [TypeSet 3.0] -->
-<script src="js/jquery.typeset-v3.js?ver=3"></script>
-
-<!-- [Custom JQuery] -->
-<script src="js/my-jquery.js?ver=1.9.1"></script>
-
-<!-- [JQuery: Standard Behaviours] -->
-<script src="js/standard-behaviours-jquery.js?ver=1.9.1"></script>
-
-<!-- [MaxMind GeoIP] -->
-
-<!--
-<script src="http://j.maxmind.com/app/geoip.js" charset="ISO-8859-1"></script>
--->
-
-<!-- Usage:
-geoip_city()
-geoip_region()
-geoip_region_name()
-geoip_postal_code()
-geoip_country_code()
-geoip_country_name()
-geoip_latitude()
-geoip_longitude()
--->
+<!-- [JQuery 1.11.1: Standard Behaviours] -->
+<script src="js/standard-behaviours-jquery.js?ver=1.11.1"></script>
 
 <noscript>
 	<style>

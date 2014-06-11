@@ -3,13 +3,12 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    <Kevin Montgomery, R.G.D.> -- <Designer> -- <@kemosite>
 
 # TECHNOLOGY COLOPHON
 
+	/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
+	/* zurb.com */
+	/* humanstxt.org */
     Standards: HTML5, CSS3
-		Components: jQuery, Orbit, Reveal, Normalize.css, Modernizr, Foundation CSS, LESS CSS
+	Components: jQuery, Orbit, Reveal, Normalize.css, Modernizr, Foundation CSS, LESS CSS
