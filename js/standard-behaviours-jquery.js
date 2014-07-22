@@ -28,15 +28,14 @@ if (retina) {
 /* [Default Link Behaviour] */
 
 $(document).ready(function(){
-	
-	$("a[rel^='prettyPhoto']").prettyPhoto();
-	
+		
 	$("a").click(function(event) {
 		
 		// Override default behaviour
 		event.preventDefault();
 		var url = $(this).attr("href");
 		var rel = $(this).attr("rel");
+		var target = $(this).attr("target");
 		
 		if (url && !rel) {
 			
@@ -45,6 +44,9 @@ $(document).ready(function(){
 				$.scrollTo($(url), 1000);
 			
 			// Otherwise, fade the page out, then go to the link
+			} else if (target == "_blank") {
+				window.open(url);
+
 			} else {
 				$(".container").fadeOut("fast").css("display: none");
 				document.location.href=url;

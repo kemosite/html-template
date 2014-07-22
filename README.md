@@ -13,7 +13,7 @@ Changelog
 - Adaptive Images 1.5.2 - https://github.com/MattWilcox/Adaptive-Images
 - Less CSS 1.7.0 - http://lesscss.org/
 - ScrollTo 1.4.12 - https://github.com/flesler/jquery.scrollTo/releases
-- Typography 4.1 - https://github.com/kemosite/typographyhttps://github.com/kemosite/typography
+- Typography 4.3 - https://github.com/kemosite/typographyhttps://github.com/kemosite/typography
 
 ## Ver. 3.0
 - HTML5 Boilerplate 4.2.0: https://github.com/h5bp/html5-boilerplate
