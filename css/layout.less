@@ -29,6 +29,12 @@ body {
    width: 100% /* needed for Firefox */
 }
 
+/* PointerEvents (IE10+) */
+a, button, /*.myelements */ {
+    -ms-touch-action: manipulation; /* IE10  */
+    touch-action: manipulation;     /* IE11+ */
+}
+
 /* Block-level flex */
 .flexbox() {
 	display: flex;

@@ -3,18 +3,17 @@
 <!--
 [HTML Template]
 Description: This is a combination of files and frameworks I use for building websites.
-Version: 4.0
+Version: 5
 Author: Kevin Montgomery
 
 [Built on these files and frameworks]
-- Foundation Essentials 5.2.3 - http://foundation.zurb.com/
-- Initializr-Verekia 4.0 - http://www.initializr.com/
-- Jquery 1.11.1  - http://jquery.com/
-- PrettyPhoto 3.1.5  - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
+- Sass 3.4.15 - http://sass-lang.com/
+- Foundation Essentials 5.5.2 - http://foundation.zurb.com/
+- JQuery 2.1.4  - http://jquery.com/
 - Adaptive Images 1.5.2 - https://github.com/MattWilcox/Adaptive-Images
-- Less CSS 1.7.0 - http://lesscss.org/
-- ScrollTo 1.4.12 - https://github.com/flesler/jquery.scrollTo/releases
+- ScrollTo 2.1.1 - https://github.com/flesler/jquery.scrollTo/releases
 - Typography 4.1 - https://github.com/kemosite/typographyhttps://github.com/kemosite/typography
+- Initializr-Verekia 4.0 - http://www.initializr.com/
 -->
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -47,7 +46,7 @@ Author: Kevin Montgomery
 <meta property='og:site_name' content='HTML Template: 4.0'/>
 <meta property='og:type' content='article'/>
 
-<title>HTML Template</title>
+<title>HTML Template 5</title>
 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
@@ -129,7 +128,7 @@ Includes:
 
 <p>This forces the H1 tag to show it's top-margin</p>
 
-<h1>HTML Template: 4.0</h1>
+<h1>HTML Template: 5</h1>
 
 <p>This is a combination of files and frameworks I use for building websites.</p>
 
@@ -137,13 +136,13 @@ Includes:
 
 <ul>
 
-<li>Foundation Essentials 5.2.3 <a href="http://foundation.zurb.com/" target="_blank">http://foundation.zurb.com/</a></li>
+<li>Sass 3.4.15 <a href="http://sass-lang.com/" target="_blank">http://sass-lang.com/</a></li>
 <li>Initializr-Verekia 4.0 <a href="http://www.initializr.com/" target="_blank">http://www.initializr.com/</a></li>
-<li>Jquery 1.11.1 <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
+<li>Foundation Essentials 5.5.2 <a href="http://foundation.zurb.com/" target="_blank">http://foundation.zurb.com/</a></li>
+<li>Jquery 2.1.4 <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
 <li>PrettyPhoto 3.1.5 <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></li>
 <li>Adaptive Images 1.5.2 <a href="https://github.com/MattWilcox/Adaptive-Images" target="_blank">https://github.com/MattWilcox/Adaptive-Images</a></li>
-<li>Less CSS 1.7.0 <a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a></li>
-<li>ScrollTo 1.4.12 <a href="https://github.com/flesler/jquery.scrollTo/releases" target="_blank">https://github.com/flesler/jquery.scrollTo/releases</a></li>
+<li>ScrollTo 2.1.1 <a href="https://github.com/flesler/jquery.scrollTo/releases" target="_blank">https://github.com/flesler/jquery.scrollTo/releases</a></li>
 <li>Typography 4.1 <a href="https://github.com/kemosite/typographyhttps://github.com/kemosite/typography" target="_blank">https://github.com/kemosite/typographyhttps://github.com/kemosite/typography</a></li>
 
 </ul>
@@ -162,13 +161,21 @@ Includes:
       <p>Once you've exhausted the fun in this document, you should check out:</p>
       <div class="row">
         <div class="large-4 medium-4 columns">
-      <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-    </div>
-        <div class="large-4 medium-4 columns">
-          <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+          <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
         </div>
         <div class="large-4 medium-4 columns">
-          <p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
+          <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
+        </div>
+        <div class="large-4 medium-4 columns">
+          <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 medium-4 medium-push-2 columns">
+          <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
+        </div>
+        <div class="large-4 medium-4 medium-pull-2 columns">
+          <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
         </div>        
       </div>
     </div>
@@ -290,164 +297,13 @@ Includes:
     <a href="#" class="medium secondary button">Secondary Btn</a></p>           
     <div class="panel">
       <h5>So many components, girl!</h5>
-      <p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
+      <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
       <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
     </div>
   </div>
 </div>
 
-<div id="main">
-      <h1>prettyPhoto</h1>
-      
-      <p>This page has been made for testing purpose only. It covers all the basic things you can handle in prettyPhoto.</p>
-  
-      <p>For complete documentation, please refer to the official website: <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></p>
-  
-      <h2>Gallery</h2>
-      <ul class="gallery clearfix">
-        <li><a href="images/fullscreen/1.JPG?lol=lol" rel="prettyPhoto[gallery1]" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures."><img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="Red round shape" /></a></li>
-        <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
-        <li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="Fire!" /></a></li>
-        <li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="Rock climbing" /></a></li>
-        <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="Fly kite, fly!" /></a></li>
-        <li><a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" /></a></li>
-      </ul>
 
-      <h2>Gallery 2</h2>
-      <ul class="gallery clearfix">
-        <li><a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery2]" title="How is the description on that one? How is the description on that one? How is the description on that one? "><img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="This is a pretty long title" /></a></li>
-        <li><a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery2]" title="Description on a single line."><img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="" /></a></li>
-        <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="" /></a></li>
-        <li><a href="images/fullscreen/1.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="" /></a></li>
-        <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery2]"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="" /></a></li>
-      </ul>
-
-      <h2>API Call</h2>
-      <script type="text/javascript" charset="utf-8">
-        api_gallery=['images/fullscreen/1.JPG','images/fullscreen/2.jpg','images/fullscreen/3.JPG'];
-        api_titles=['API Call Image 1','API Call Image 2','API Call Image 3'];
-        api_descriptions=['Description 1','Description 2','Description 3'];
-      </script>
-      <p><a href="#" onclick="$.prettyPhoto.open(api_gallery,api_titles,api_descriptions); return false">API call</a></p>
-
-      <h2>Picture alone</h2>
-      <ul class="gallery clearfix">
-        <li><a href="images/fullscreen/2.jpg" rel="prettyPhoto" title="&lt;a href=&#x27;http://www.google.ca&#x27; target=&#x27;_blank&#x27; &gt;This will open Google.com in a new window&lt;/a&gt;"><img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Picture alone 1" /></a></li>
-      </ul>
-      <div class="fleft">
-        <h2>Flash</h2>
-        <ul class="gallery clearfix">
-          <li><a href="http://www.adobe.com/products/flashplayer/include/marquee/design.swf?width=792&amp;height=294" rel="prettyPhoto[flash]" title="Flash 10 demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="Flash 10 demo" /></a></li>
-        </ul>
-      </div>
-      <div class="fleft">
-        <h2>YouTube</h2>
-        <ul class="gallery clearfix">
-          <li><a href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="" /></a></li>
-          <li><a href="http://youtu.be/kh29_SERH0Y?rel=0" rel="prettyPhoto" title="YouTube demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="" /></a></li>
-        </ul>
-      </div>
-      <div class="fleft">
-        <h2>Vimeo</h2>
-        <ul class="gallery clearfix">
-          <li><a href="http://vimeo.com/7874398&width=700" rel="prettyPhoto" title="Vimeo video"><img src="images/thumbnails/flash-logo.png" width="60" alt="VIMEO!" /></a></li>
-        </ul>
-      </div>
-      
-      <br class="cboth" />
-  
-      <h2>Movies (.mov)</h2>
-      <ul class="gallery clearfix">
-        <li><a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]" title="Tron!"><img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" /></a></li>
-        <li><a href="http://trailers.apple.com/movies/sony_pictures/karatekid/karatekid-tlr3_r640s.mov?width=640&height=304" rel="prettyPhoto[movies]" title="The Karate Kid"><img src="images/thumbnails/quicktime-logo.gif" alt="The Karate Kid" width="60" /></a></li>
-        <li><a href="http://trailers.apple.com/movies/paramount/shutterisland/shutterisland-tvspot1_r640s.mov?width=640&height=272" rel="prettyPhoto[movies]" title="Shutter Island"><img src="images/thumbnails/quicktime-logo.gif" alt="Shutter Island" width="60" /></a></li>
-      </ul>
-  
-      <h2>Movies (.mov) alone</h2>
-      <ul class="gallery clearfix">
-        <li><a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto" title="Tron!"><img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" /></a></li>
-      </ul>
-  
-      <h2>Unusual sizes</h2>
-      <ul class="gallery clearfix">
-        <li><a href="images/fullscreen/wide.gif" rel="prettyPhoto[unusual]">Wide image (3000 x 1500)</a></li>
-        <li><a href="images/fullscreen/high.gif" rel="prettyPhoto[unusual]">High image (1500 x 3000)</a></li>
-        <li><a href="images/fullscreen/huge.gif" rel="prettyPhoto[unusual]">Huge image (3000 x 3000)</a></li>
-      </ul>
-  
-      <h2>Iframe</h2>
-      <ul class="gallery clearfix">
-        <li><a href="http://www.google.com/search?ie=UTF-8&amp;oe=UTF-8&amp;q=prettyphoto&amp;iframe=true&amp;width=100%&amp;height=100%" rel="prettyPhoto[iframe]">Google.ca</a></li>
-        <li><a href="http://www.facebook.com?iframe=true&amp;width=600&amp;height=300" rel="prettyPhoto[iframe]">Facebook</a></li>
-        <li><a href="http://nmfe.co?iframe=true&amp;width=300&amp;height=200" rel="prettyPhoto[iframe]">My site</a></li>
-      </ul>
-  
-      <h2>AJAX</h2>
-      <ul class="gallery clearfix">
-        <li><a href="xhr_response.html?ajax=true&amp;width=400&amp;height=160" rel="prettyPhoto[ajax]">Sample AJAX</a></li>
-      </ul>
-  
-      <h2>Mixed gallery</h2>
-      <ul class="gallery clearfix">
-        <li><a href="http://www.google.ca?iframe=true&amp;width=1000&amp;height=500" rel="prettyPhoto[mixed]">Google.ca</a></li>
-        <li><a href="http://trailers.apple.com/movies/disney/tronlegacy/tronlegacy-tsr1_r640s.mov?width=640&height=272" rel="prettyPhoto[mixed]" title="Tron!"><img src="images/thumbnails/quicktime-logo.gif" alt="Tron teaser" width="60" /></a></li>
-        <li><a href="images/fullscreen/5.jpg" rel="prettyPhoto[mixed]"><img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="" /></a></li>
-        <li><a href="http://www.adobe.com/products/flashplayer/include/marquee/design.swf?width=792&amp;height=294" rel="prettyPhoto[mixed]" title="Flash 10 demo"><img src="images/thumbnails/flash-logo.png" width="60" alt="Flash 10 demo" /></a></li>
-      </ul>
-  
-      <h2>Inline content</h2>
-      <ul class="gallery clearfix">
-        <li><a href="#inline_demo" rel="prettyPhoto[inline]">Inline content 1</a></li>
-        <li><a href="#inline_demo2" rel="prettyPhoto[inline]">Inline content 2</a></li>
-        <li><a href="#inline_demo3" rel="prettyPhoto[inline]">Inline content 3</a></li>
-      </ul>
-      <div id="inline_demo" style="display:none;">
-        <p><a href="http://www.google.ca?iframe=true&amp;width=1000&amp;height=500">Google.ca</a></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div id="inline_demo2" style="display:none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div id="inline_demo3" style="display:none;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p><img src="images/fullscreen/2.jpg" /></p>
-      </div>
-  
-      <h2>Custom content</h2>
-      <ul id="custom_content" class="gallery clearfix">
-        <li><a href="#?custom=true&width=260&height=270" rel="prettyPhoto">Google Maps</a></li>
-        <li><a href="#?custom=true&width=260&height=400" rel="prettyPhoto">Ads</a></li>
-      </ul>
-      
-      <br /><br />
-      
-      <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/_HOMoTqEASY&hl=en&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="opaque"></param><embed src="http://www.youtube.com/v/_HOMoTqEASY&hl=en&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344" wmode="opaque"></embed></object>
-      <iframe title="YouTube video player" width="425" height="344" src="http://www.youtube.com/embed/_HOMoTqEASY" frameborder="0" allowfullscreen></iframe>
-  
-      <script type="text/javascript" charset="utf-8">
-      $(document).ready(function(){
-        $("area[rel^='prettyPhoto']").prettyPhoto();
-        
-        $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
-        $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
-    
-        $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-          custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-          changepicturecallback: function(){ initialize(); }
-        });
-
-        $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-          custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-          changepicturecallback: function(){ _bsap.exec(); }
-        });
-      });
-      </script>
-  
-</div>
 <!-- [End Container] -->
 
 <!-- [Initializr 4.0 Plugins] -->
@@ -462,10 +318,10 @@ Includes:
 <!-- [Initialize LESS CSS 1.7.0] -->
 <script>var less = { env: "development" }; // Comment out if used in production</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
-<script>window.less || document.write('<script type="text/javascript" src="js/vendor/less-1.7.0.min.js?ver=1.7.0"><\/script>')</script>
+<script>window.less.async || document.write('<script type="text/javascript" src="js/vendor/less-1.7.0.min.js?ver=1.7.0"><\/script>')</script>
 
 <!-- [Initialize Foundation Essentials 5.2.3] -->
-<script src="js/vendor/foundation.min.js"></script>
+<script src="js/vendor/foundation.min.js?ver=5.2.3"></script>
 <script>
   $(document).foundation();
 </script>
